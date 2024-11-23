@@ -2,7 +2,10 @@
 
 A web interface for interacting with Ollama's Llama 3.2 Vision model, built with p5.js. This application allows you to chat with an AI assistant and share images for visual analysis.
 
-[p5 Sketch](https://editor.p5js.org/ollama/sketches/1Q1Q6Q6Zw)
+## Preview
+
+![Ollama Llama 3.2 Vision p5.js Chatbot](./asset/preview.png)
+
 
 ## Prerequisites
 
