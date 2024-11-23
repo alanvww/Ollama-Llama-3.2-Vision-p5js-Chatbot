@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="p5.js"></script>
+  <link rel="icon" href="https://fav.farm/🥽" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ollama Llama 3.2 Vision p5.js Chatbot</title>
+</head>
+<body>
+  <main>
+    <div id="chat-container"></div>
+    <div class="input-container" id="input-container">
+      <div class="drag-hint">Drag and drop image here or use the button</div>
+      <div class="preview-area" id="preview-container"></div>
+      <div class="input-controls">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <label for="file-input" class="upload-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7"/>
+            <path d="m17 8-5-5-5 5"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <input type="file" id="file-input" accept="image/*" style="display: none;">
+        </label>
+        <button id="submit-button">Send</button>
+      </div>
+    </div>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+</html>

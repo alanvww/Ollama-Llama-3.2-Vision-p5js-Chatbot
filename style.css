@@ -1,0 +1,186 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	font-family: system-ui;
+}
+
+#chat-container {
+	width: 80%;
+	background: linear-gradient(
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)
+		),
+		url('asset/ollama-vision.png');
+	background-size: contain;
+	background-position: center;
+	max-width: 600px;
+	height: 70vh;
+	margin: 1vh auto;
+  margin-top: 10vh;
+	overflow-y: scroll;
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.input-container {
+	width: 80%;
+	max-width: 600px;
+	margin: 10px auto;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 10px;
+	position: relative;
+}
+
+.drag-hint {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #999;
+	font-size: 12px;
+	pointer-events: none;
+}
+
+.preview-area {
+	position: relative;
+	min-height: 0;
+	max-height: 150px;
+	overflow-y: auto;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.preview-area img {
+	max-height: 150px;
+	max-width: 100%;
+	object-fit: contain;
+	border-radius: 4px;
+}
+
+.clear-image {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid #ff4444;
+	border-radius: 50%;
+	color: #ff4444;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 1;
+	z-index: 10;
+	transition: all 0.2s ease;
+}
+
+.clear-image:hover {
+	background-color: #ff4444;
+	color: white;
+}
+
+.input-controls {
+	display: flex;
+	margin-top: 20px;
+	gap: 10px;
+	align-items: center;
+}
+
+input[type='text'] {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.upload-btn {
+	padding: 8.5px 10px;
+	background-color: #f0f0f0;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+	background-color: #e0e0e0;
+}
+
+.upload-btn svg {
+	width: 14px;
+	height: 14px;
+	padding-block: 1px;
+	padding-inline: 6px;
+	margin: auto;
+	stroke: #666;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #2196f3;
+	color: white;
+	border: none;
+	margin: auto;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #1976d2;
+}
+
+.message {
+	margin: 10px;
+	padding: 12px;
+	border-radius: 8px;
+	max-width: 80%;
+}
+
+.user-message {
+	background-color: #e3fdf2;
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.bot-message {
+	background-color: #e3f2fd;
+	margin-right: auto;
+	margin-left: 10px;
+}
+
+.message-header {
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #666;
+}
+
+.message-content {
+	word-wrap: break-word;
+}
+
+button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: #90caf9;
+}
+
+.drag-over {
+	border-color: #2196f3;
+	background-color: #e3f2fd;
+}
+
+.loading {
+	cursor: progress;
+}
